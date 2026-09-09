@@ -1,0 +1,265 @@
+{
+  "stand": "2026-09-10",
+  "quelle": "Wissensbasis Ferienwohnungen (docs/wissensbasis/), ausgewertet aus dem übergebenen Repository-Export.",
+  "hinweis": "Werte mit \"art\": \"richtwert\" oder \"beispiel\" sind dokumentierte Einzelfälle, KEINE verbindlichen Preise. Nur Einträge mit \"art\": \"regel\" sind als allgemeingültig dokumentiert.",
+
+  "marke": {
+    "status": "offen",
+    "arbeitstitel": ["You @ Kasdorf", "Kasdorf Collection", "Kasdorf Living", "Kasdorf Homes", "Alcundum Homes"],
+    "empfehlungAusGespraech": "Kasdorf Living",
+    "fruehereIdeen": ["Berg & Hof", "Heimatraum", "Lieblingsorte", "Landrefugien", "Berg & Weser"],
+    "ziel": "Dachmarke, die Rosenhof und Beckerberg verbindet und für weitere Objekte skalierbar ist.",
+    "bekannteDomains": ["rosenhof-zur-weser.de"]
+  },
+
+  "standards": {
+    "checkIn": "ab 15:00",
+    "checkOut": "bis 10:00",
+    "zugang": "Schlüsselbox; Code wird typischerweise einen Tag vor Anreise mitgeteilt.",
+    "checkOutHinweis": "Schlüssel zurück in den Schlüsseltresor, damit die Reinigung Zugang hat.",
+    "kommunikation": {
+      "bevorzugt": "WhatsApp",
+      "ergaenzend": ["E-Mail", "Booking", "Airbnb"]
+    },
+    "onlineCheckIn": {
+      "genutzt": true,
+      "erhobeneDaten": ["Name", "Geburtsdatum", "Adresse"],
+      "optional": ["E-Mail-Adresse", "Wohnort"]
+    },
+    "direktbuchungsvorteil": {
+      "art": "regel",
+      "rabattProzent": 10,
+      "basis": "jeweiliger Plattformpreis"
+    },
+    "bewertungsziel": "10/10, insbesondere auf Booking",
+    "stornierung": {
+      "art": "einzelfall",
+      "regel": "24 Stunden vorher bzw. bis 24:00 Uhr des Vortags",
+      "hinweis": "In einem konkreten Kontext genannt; nicht als objektübergreifende Regel bestätigt."
+    }
+  },
+
+  "objekte": [
+    {
+      "id": "rosenhof-zur-weser",
+      "name": "Rosenhof zur Weser",
+      "region": "Weserbergland",
+      "adresse": {
+        "strasse": "Alter Kirchweg 1",
+        "plz": "37671",
+        "ort": "Höxter-Stahle",
+        "land": "DE",
+        "hinweis": "Hausnummer 1 stammt aus der Gästekommunikation; Stammdaten nennen nur \"Alter Kirchweg\"."
+      },
+      "gesamtkapazitaet": 16,
+      "parken": {
+        "art": "regel",
+        "beschreibung": "Privater Hof-Parkplatz inklusive.",
+        "anfahrtshinweis": "Links neben dem Haus schräg parken."
+      },
+      "umgebung": [
+        { "name": "Bäcker", "entfernung": "ca. 1 Minute" },
+        { "name": "Volksbank", "entfernung": "nebenan" },
+        { "name": "Weser", "entfernung": "ca. 5 Minuten" },
+        { "name": "Sensoria – Haus der Düfte und Aromen, Holzminden", "entfernung": "ca. 1,4 km", "eignung": "Schlechtwetter-Ausflug" },
+        { "name": "Spielplatz am Trierweg", "entfernung": null, "eignung": "Familien, auch mit Hund" }
+      ],
+      "hunde": {
+        "art": "einzelfall",
+        "preis": 6,
+        "einheit": "pro Nacht",
+        "datum": "2026-09-05",
+        "regeln": ["Bett und Sofa tabu"]
+      },
+      "eBikes": {
+        "bestand": 2,
+        "geplantZusaetzlich": 2,
+        "preise": [
+          { "art": "regel", "zielgruppe": "Standard", "preis": 25, "einheit": "pro Tag" },
+          { "art": "regel", "zielgruppe": "Hausgäste", "preis": 20, "einheit": "pro Tag", "hinweis": "20 % Rabatt" }
+        ],
+        "reservierung": true
+      },
+      "reinigung": {
+        "hinweis": "Widersprüchliche Angaben in der Quelle – vor Website-Veröffentlichung klären.",
+        "dokumentierteWerte": [
+          { "art": "beispiel", "bezeichnung": "Endreinigung", "preis": 55 },
+          { "art": "beispiel", "bezeichnung": "Grundreinigung pro Wohnung (Booking-Kontext)", "preis": 120 },
+          { "art": "beispiel", "bezeichnung": "Zwischenreinigung kleine Wohnung", "preis": 65 },
+          { "art": "beispiel", "bezeichnung": "Zwischenreinigung große Wohnung", "preis": 95 }
+        ]
+      },
+      "muelltrennung": {
+        "gelb": "Verpackungen",
+        "blau": "Papier",
+        "gruen": "Bioabfall in Zeitung/Papier, keine losen Reste",
+        "schwarz": "Restmüll",
+        "regel": "Nicht mischen. Bei Unklarheit: Schwarz."
+      },
+      "pakete": {
+        "regel": "Paketbox mit Videoüberwachung nutzen; keine Ablage an den Ferienwohnungseingängen."
+      },
+      "einheiten": [
+        {
+          "id": "fachwerktraum",
+          "name": "Fachwerktraum",
+          "smoobuApartmentId": null,
+          "lage": "Erdgeschoss",
+          "aussenbereich": "Terrasse",
+          "maxBetten": 4,
+          "schluesselbox": "links vom Eingang neben dem Briefkasten",
+          "zielgruppe": "Urlaub"
+        },
+        {
+          "id": "blick-ins-gruene",
+          "name": "Blick ins Grüne",
+          "smoobuApartmentId": null,
+          "lage": "1. Obergeschoss",
+          "aussenbereich": "Balkon",
+          "maxBetten": 4,
+          "schluesselbox": "rechts vom Eingang, neben der ausziehbaren Seitenmarkise",
+          "zielgruppe": "Urlaub"
+        },
+        {
+          "id": "das-quartier",
+          "name": "Das Quartier",
+          "smoobuApartmentId": null,
+          "bezeichnung": "Firmenunterkunft",
+          "bezeichnungHinweis": "Bevorzugte Bezeichnung ist \"Firmenunterkunft\", nicht \"Monteurwohnung\".",
+          "maxPersonen": 8,
+          "schlafzimmer": 4,
+          "bettenProSchlafzimmer": "2 Einzelbetten",
+          "bettenHinweis": "Mit Toppern zu 2 × 2 m Doppelbetten kombinierbar.",
+          "baeder": 2,
+          "ausstattung": [
+            "Voll ausgestattete Küche",
+            "Waschmaschine kostenlos nutzbar",
+            "Bettwäsche und Handtücher inklusive",
+            "WLAN",
+            "MagentaTV/Mediathek",
+            "Aufenthalts-/Freizeitbereich mit Tischfußball und Darts",
+            "Terrasse mit Sitzmöglichkeiten"
+          ],
+          "zielgruppe": "Firmen, Mitarbeiter, Projektteams"
+        }
+      ]
+    },
+
+    {
+      "id": "haus-am-beckerberg",
+      "name": "Haus am Beckerberg",
+      "region": "Harz",
+      "adresse": {
+        "strasse": "Helmkampff-Straße",
+        "hausnummer": null,
+        "plz": null,
+        "ort": "Bad Grund",
+        "land": "DE",
+        "hinweis": "Hausnummer und PLZ fehlen in der Quelle."
+      },
+      "anfahrt": "Zufahrt über Helmkampffstraße/Lukashof; nicht über Abgunst.",
+      "namenskonzept": "Märchenhafte Fabelwesen-Linie: Kobold, Einhorn, Drache.",
+      "zugang": {
+        "schluesselbox": "links neben dem Eingang",
+        "aeltereBeschreibung": "links neben Eingang, rechts neben Briefkästen"
+      },
+      "parken": {
+        "ersterPlatz": { "art": "regel", "preis": 0, "hinweis": "inklusive" },
+        "zweitesFahrzeug": { "art": "regel", "preis": 5, "einheit": "pro Nacht" },
+        "oeffentlich": "In älterer Anreisebeschreibung: kostenlose Parkmöglichkeiten am rechten Seitenstreifen."
+      },
+      "kurtaxe": {
+        "art": "regel",
+        "preis": 2.10,
+        "einheit": "pro Person und Nacht",
+        "gaestekarte": "HATIX",
+        "zahlung": ["PayPal", "bar vor Ort"],
+        "hinweis": "In einem älteren Prozessstand wurde genannt, dass die Kurtaxe bei Geschäftsreisen entfällt – Gültigkeit unklar."
+      },
+      "waesche": {
+        "art": "regel",
+        "inklusive": true,
+        "proPerson": ["1 kleines Handtuch", "1 Duschtuch 70 × 140 cm"]
+      },
+      "hunde": {
+        "art": "regel",
+        "preis": 25,
+        "einheit": "einmaliger Zuschlag",
+        "regeln": ["Nicht auf Bett oder Sofa"],
+        "kulanzBeispiel": "Bei einer Anfrage mit 3 Hunden wurden nur 2 berechnet."
+      },
+      "sauna": {
+        "art": "regel",
+        "preis": 35,
+        "einheit": "pro Abend",
+        "nutzungszeit": "17:00–24:00",
+        "vorlauf": "mindestens 12 Stunden vorher anmelden",
+        "nutzung": "Alleinnutzung/privat",
+        "argumentation": "Direkt bei der Ferienwohnung, kein Wegfahren; bei 3–4 Personen relativiert sich der Preis pro Person."
+      },
+      "reinigung": {
+        "dokumentierteWerte": [
+          { "art": "beispiel", "bezeichnung": "Reinigung", "preisVon": 65, "preisBis": 69 }
+        ]
+      },
+      "umgebung": {
+        "einkauf": [
+          { "name": "Nahkauf Bad Grund", "entfernung": null },
+          { "name": "Aldi/Edeka Windhausen", "entfernung": "ca. 7 Minuten" }
+        ],
+        "gastronomieUndAusfluege": [
+          "Altes Backhaus",
+          "Europa",
+          "Oase",
+          "Vincenzo in Windhausen",
+          "Iberger Albertturm",
+          "Café Antique",
+          "Cafe Flora"
+        ]
+      },
+      "einheiten": [
+        {
+          "id": "fewo-einhorn",
+          "name": "FeWo Einhorn",
+          "smoobuApartmentId": null,
+          "lage": "Obergeschoss"
+        },
+        {
+          "id": "fewo-kobold",
+          "name": "FeWo Kobold",
+          "smoobuApartmentId": null,
+          "lage": "Erdgeschoss",
+          "preisbeispiel": { "art": "beispiel", "preis": 35, "einheit": "pro Nacht" }
+        },
+        {
+          "id": "fewo-drachen",
+          "name": "FeWo Drachen",
+          "smoobuApartmentId": null,
+          "lage": "Hinterhaus/am Wald",
+          "besonderheit": "zwei Eingänge"
+        }
+      ]
+    }
+  ],
+
+  "zusatzleistungen": [
+    {
+      "bezeichnung": "Zusätzliche Person",
+      "art": "regel",
+      "preis": 25,
+      "einheit": "pro Nacht",
+      "abweichung": "In einem Fall wurden 15 €/Nacht angeboten."
+    }
+  ],
+
+  "geplant": {
+    "tinyHouses": {
+      "standort": "Höxter-Stahle",
+      "anzahl": 3,
+      "masseProEinheit": "2,50 × 7,23 m",
+      "abstandsflaechen": "3 m thematisiert",
+      "nutzung": "Ferienhaus/Beherbergung",
+      "flurstueck": "1602"
+    }
+  }
+}

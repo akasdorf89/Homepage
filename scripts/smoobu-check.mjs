@@ -6,6 +6,7 @@
  */
 
 import { createClient, SmoobuError } from '../lib/smoobu.mjs';
+import { reconcileWithSmoobu } from '../lib/content.mjs';
 
 async function main() {
   const client = createClient();
@@ -15,12 +16,26 @@ async function main() {
   console.log(`  Konto: ${account.firstName ?? ''} ${account.lastName ?? ''}`.trimEnd());
   if (account.email) console.log(`  E-Mail: ${account.email}`);
 
-  const { apartments = [] } = await client.apartments();
-  console.log(`  Apartments: ${apartments.length}`);
+  const { apartments: ids = [] } = await client.apartments();
+  const apartments = await Promise.all(ids.map((id) => client.apartment(id)));
+  console.log(`  Apartments in Smoobu: ${apartments.length}`);
+  for (const apartment of apartments) {
+    console.log(`    - ${apartment.id}: ${apartment.name ?? '(ohne Namen)'}`);
+  }
 
-  for (const id of apartments) {
-    const details = await client.apartment(id);
-    console.log(`    - ${id}: ${details.name ?? '(ohne Namen)'}`);
+  const { matched, unmatched, unknown } = await reconcileWithSmoobu(apartments);
+  console.log('\nAbgleich mit content/objekte.json:');
+  for (const { unit, apartment } of matched) {
+    console.log(`  ✓ ${unit.objektName} / ${unit.name} → ${apartment.name}`);
+  }
+  for (const unit of unmatched) {
+    console.log(`  ? ${unit.objektName} / ${unit.name} – keine smoobuApartmentId gepflegt`);
+  }
+  for (const apartment of unknown) {
+    console.log(`  ! Smoobu-Apartment ${apartment.id} (${apartment.name}) – keine Einheit im Content`);
+  }
+  if (unmatched.length || unknown.length) {
+    console.log('\n  Zuordnung in content/objekte.json über "smoobuApartmentId" je Einheit ergänzen.');
   }
 }
 
