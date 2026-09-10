@@ -1,0 +1,54 @@
+{
+  "_hinweis": "Zentrale Konfiguration der Dachmarke. Sobald Name und Domain feststehen, werden nur die Felder unter \"marke\" und \"domain\" geändert – die Seitenstruktur bleibt unberührt.",
+
+  "marke": {
+    "status": "offen",
+    "name": "PLATZHALTER_MARKE",
+    "nameKurz": "PLATZHALTER_MARKE",
+    "claim": null,
+    "kandidaten": [
+      "Kasdorf Living",
+      "Kasdorf Collection",
+      "Kasdorf Homes",
+      "You @ Kasdorf",
+      "Alcundum Homes"
+    ],
+    "empfehlungAusGespraech": "Kasdorf Living"
+  },
+
+  "domain": {
+    "status": "offen",
+    "haupt": "PLATZHALTER_DOMAIN",
+    "protokoll": "https",
+    "wwwPraefix": false,
+    "struktur": "pfad",
+    "strukturBegruendung": "Objekte als Pfade unter der Hauptdomain (/rosenhof-zur-weser/) statt als Subdomains. Eine Domain bündelt die gesamte Suchmaschinen-Autorität; Subdomains würden sie auf mehrere Hosts aufteilen. Das entspricht dem Ziel, ohne Werbebudget organisch zu ranken.",
+    "bestehende": [
+      {
+        "domain": "rosenhof-zur-weser.de",
+        "status": "vorhanden",
+        "verwendung": "301-Weiterleitung auf /rosenhof-zur-weser/",
+        "hinweis": "Nicht abschalten – bestehende Rankings und Verlinkungen gehen sonst verloren."
+      }
+    ]
+  },
+
+  "sprache": "de-DE",
+
+  "seiten": {
+    "start": { "pfad": "/", "titel": "Ferienwohnungen im Harz und im Weserbergland" },
+    "objekt": { "pfadMuster": "/{objekt}/" },
+    "einheit": { "pfadMuster": "/{objekt}/{einheit}/" },
+    "weitere": [
+      { "id": "direkt-buchen", "pfad": "/direkt-buchen/", "titel": "Direkt buchen – 10 % günstiger", "zweck": "Direktbuchungsvorteil erklären" },
+      { "id": "firmenunterkunft", "pfad": "/firmenunterkunft/", "titel": "Firmenunterkunft für Projektteams", "zweck": "Zielgruppenseite für Das Quartier" },
+      { "id": "region", "pfad": "/region/", "titel": "Region und Ausflugsziele", "zweck": "Regionale Inhalte, SEO-Longtail" },
+      { "id": "kontakt", "pfad": "/kontakt/", "titel": "Kontakt" }
+    ],
+    "rechtlich": [
+      { "id": "impressum", "pfad": "/impressum/", "titel": "Impressum", "status": "fehlt" },
+      { "id": "datenschutz", "pfad": "/datenschutz/", "titel": "Datenschutzerklärung", "status": "fehlt" },
+      { "id": "agb", "pfad": "/agb/", "titel": "AGB", "status": "fehlt", "hinweis": "Für Direktbuchungen zwingend; Stornoregel ist noch nicht verbindlich festgelegt." }
+    ]
+  }
+}

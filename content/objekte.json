@@ -220,12 +220,14 @@
       "einheiten": [
         {
           "id": "fewo-einhorn",
+          "slug": "einhorn",
           "name": "FeWo Einhorn",
           "smoobuApartmentId": null,
           "lage": "Obergeschoss"
         },
         {
           "id": "fewo-kobold",
+          "slug": "kobold",
           "name": "FeWo Kobold",
           "smoobuApartmentId": null,
           "lage": "Erdgeschoss",
@@ -233,6 +235,7 @@
         },
         {
           "id": "fewo-drachen",
+          "slug": "drachen",
           "name": "FeWo Drachen",
           "smoobuApartmentId": null,
           "lage": "Hinterhaus/am Wald",

@@ -8,15 +8,36 @@ Direktbuchungen zu fördern.
 
 | Pfad | Inhalt |
 | --- | --- |
+| `content/site.json` | Dachmarke, Domain, Seitenstruktur |
 | `content/objekte.json` | Objekte und Einheiten – redaktionelle Quelle für die Website |
+| `lib/site.mjs` | Pfade, Weiterleitungen, Seitenliste |
 | `lib/content.mjs` | Zugriff auf die Objektdaten, Abgleich mit Smoobu |
 | `lib/smoobu.mjs` | Smoobu-API-Client (nur lesende Endpunkte) |
+| `scripts/sitemap.mjs` | Gibt die geplante Seitenstruktur aus |
 | `scripts/smoobu-check.mjs` | Verbindungstest und Zuordnungsabgleich |
+| `docs/website-struktur.md` | Domain-Aufbau und wie ein neues Objekt dazukommt |
 | `docs/wissensbasis/` | Betriebswissen: Preise, Prozesse, Kommunikation, Marke |
 | `docs/wissensbasis/AUSWERTUNG.md` | Widersprüche, Lücken und offene Entscheidungen |
 
 Arbeitsteilung: `content/objekte.json` liefert Texte und Stammdaten, Smoobu liefert
 Verfügbarkeiten und aktuelle Preise. Verknüpft wird über `smoobuApartmentId` je Einheit.
+
+## Struktur der Website
+
+Eine Hauptdomain, darunter die Objekte, darunter die Wohnungen:
+
+```
+hauptdomain.de/rosenhof-zur-weser/fachwerktraum/
+hauptdomain.de/haus-am-beckerberg/einhorn/
+```
+
+```sh
+node scripts/sitemap.mjs
+```
+
+Marke und Domain stehen noch nicht fest und sind deshalb Platzhalter in
+`content/site.json`. Die Struktur darunter ist festgelegt und von der Namensentscheidung
+unabhängig – Details in [`docs/website-struktur.md`](docs/website-struktur.md).
 
 ## Smoobu-Anbindung
 
